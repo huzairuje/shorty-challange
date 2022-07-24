@@ -56,6 +56,21 @@ b. by running the program by this command (bash way):
    ```
    the service will run on the default port on `8080`
 
+c. by running the program by this command (docker way):
+1. go to directory of the project, by this command
+   ```shell
+   cd test_amartha_muhammad_huzair
+   ```
+2. build the image first
+   ```shell
+    docker build --tag tiny-url .
+   ```
+3. and run the container.
+   ```shell
+   docker run -p -d  8080:8080 tiny-url:latest
+   ```
+   that's it!
+
 ## 2. Usage
 all the url or feature provided by this microservice
 
