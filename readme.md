@@ -39,11 +39,20 @@ b. by running the program by this command (bash way):
      ```
 2. run the program by this command with the argument on which port are you using
      ```shell
-     ./bin/tiny_url -port=3000
+     ./bin/tiny_url_<YOUR_OPERATING_SYSTEM>_<YOUR_OPERATING_SYSTEM_ARCHITECTURE> -port=3000
      ```
+   ```shell
+   ./bin/tiny_url_windows_x64.exe -port=3000
+   ```
+   ```shell
+   ./bin/tiny_url_linux_x64 -port=3000
+   ```
    or you can leave the option of the argument just to run the service by this exact command
    ```shell
-   ./bin/tiny_url
+   ./bin/tiny_url_windows_x64.exe
+   ```
+   ```shell
+   ./bin/tiny_url_linux_x64
    ```
    the service will run on the default port on `8080`
 
