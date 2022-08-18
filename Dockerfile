@@ -21,7 +21,7 @@ RUN export CGO_ENABLED=0 && go build -o /go/bin/tiny_url
 RUN chmod +x /go/bin/tiny_url
 
 ##############################################
-# STEP 2 build a small image using alpine:3.14
+# STEP 2 build a small image using scratch
 ##############################################
 FROM scratch
 

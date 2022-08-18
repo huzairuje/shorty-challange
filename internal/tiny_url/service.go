@@ -64,6 +64,11 @@ func (s Service) CreateData(dataReq Data) (string, error) {
 		if err != nil {
 			return "", err
 		}
+
+		if !utils.IsValidShortCode(dataReq.ShortCode) {
+			newErr := errors.New("code generated is not valid, you can try again")
+			return "", newErr
+		}
 	}
 
 	timeNow := time.Now().Format(time.RFC3339)

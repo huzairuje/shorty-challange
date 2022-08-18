@@ -51,8 +51,12 @@ func (p Handler) CreateTinyUrl(ctx *gin.Context) {
 		return
 	}
 
-	data := gin.H{
-		"shortcode": shortCode,
+	type resp struct {
+		ShortCode string `json:"shortCode"`
+	}
+
+	data := &resp{
+		ShortCode: shortCode,
 	}
 	response.DataWithoutMeta(ctx, data)
 	return
@@ -80,10 +84,15 @@ func (p Handler) StatSingleTinyUrl(ctx *gin.Context) {
 		response.CustomResponse(ctx, http.StatusNotFound, utils.NotFound, utils.ShortCodeIsNotExist)
 		return
 	}
-	resp := gin.H{
-		"startDate":     data.StartDate,
-		"lastSeenDate":  data.LastSeenDate,
-		"redirectCount": data.RedirectCount,
+	type responseStat struct {
+		StartDate     string `json:"startDate"`
+		LastSeenDate  string `json:"lastSeenDate"`
+		RedirectCount int    `json:"redirectCount"`
+	}
+	resp := &responseStat{
+		StartDate:     data.StartDate,
+		LastSeenDate:  data.LastSeenDate,
+		RedirectCount: data.RedirectCount,
 	}
 	response.DataWithoutMeta(ctx, resp)
 }
