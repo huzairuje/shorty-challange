@@ -66,7 +66,7 @@ func (s Service) CreateData(dataReq Data) (string, error) {
 		}
 
 		if !utils.IsValidShortCode(dataReq.ShortCode) {
-			newErr := errors.New("code generated is not valid, you can try again")
+			newErr := errors.New("shortcode generated is not valid, you can try again")
 			return "", newErr
 		}
 	}
