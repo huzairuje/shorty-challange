@@ -1,4 +1,4 @@
-module test_amartha_muhammad_huzair
+module shorty-challenge
 
 go 1.17
 

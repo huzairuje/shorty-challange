@@ -4,7 +4,7 @@ import (
 	"errors"
 	"time"
 
-	"test_amartha_muhammad_huzair/pkg/utils"
+	"shorty-challenge/pkg/utils"
 
 	"github.com/lucasjones/reggen"
 )

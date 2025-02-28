@@ -3,8 +3,8 @@ package tiny_url
 import (
 	"net/http"
 
-	"test_amartha_muhammad_huzair/pkg/response"
-	"test_amartha_muhammad_huzair/pkg/utils"
+	"shorty-challenge/pkg/response"
+	"shorty-challenge/pkg/utils"
 
 	"github.com/gin-gonic/gin"
 )
